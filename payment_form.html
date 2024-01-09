@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <!--Icons-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Bootstrap core CSS-->
+    <link href="Bootstrapcss/bootstrap.min.css" rel="stylesheet">
+    <!-- MY Modified CSS-->
+    <link rel="stylesheet" href="form.css">
+    
+
+</head>
+<body>
+    <form action="" name="Paymentform" onsubmit="return validateForm()" method="GET">
+    <div class="heading">
+        <h1>Payment Form</h1>
+        <p fileds are followed by *</p>
+    </div>
+    <!--Container using Bootstrap-->
+    <div class="containers">
+        <!--Contact Information-->
+        <h2>Contact Information</h2>
+        <p>Name: *<input type="text" name="name" placeholder="Name"></p>
+        <fieldset>
+            <!--Gender using Bootstrap-->
+            <legend>Gender *</legend>
+            <p>
+                <div class=" form-check-inline gender">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Male</label>
+                  </div>
+                  <div class="form-check form-check-inline gender">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                  </div>
+            </p>
+        </fieldset>
+            <div class="form-group">
+                <label for="comment">Address: *</label>
+                <textarea rows="6" cols="10" placeholder="Enter your Address" name="address" class="address"></textarea>
+              </div>
+        </p>
+        <p>Email: *<input type="email" name="email" id="email" placeholder="xyz@gmail.com"></p>
+        </p>
+        <p>Pincode: * <input type="number" name="pincode" name="pincode" id="pincode" placeholder="123456"></p>
+
+        <!--Payment Information-->
+        <h2>Payment Information</h2>
+        <p>Card type: *
+            <select name="Card type" id="card_type" class="form-select">
+                <option value="">&#xf09d --Select a Cardtype--</option>
+                <option value="visa">&#xf1f0 visa</option>
+                <option value="Master card">&#xf1f1 Master card</option>
+                <option value="Maestro">&#xf1f3 American Express</option>
+                <option value="Rupay">&#xf1f2 Discover</option>
+            </select>
+         </p>
+         <p>
+             Card Number: *<input type="number" name="cardnumber" id="card_number" placeholder="1111222233334444" >
+         </p>
+         <p>
+             Expiration date: *<input type="date" name="exp_date" id="exp_date">
+         </p>
+         <p>
+             CVV: *<input type="password" name="cvv" id="CVV" placeholder="123">
+         </p>
+         <!--Button using bootstrap-->
+        <input type="submit" class="btn btn-secondary btn-lg btn-block submit" value="Make a Payment">
+
+    </div>
+    </form>
+    <!--JavaScript to Validate Form-->
+    <script src="forms.js"></script>
+
+</body>
